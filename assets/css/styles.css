@@ -1,0 +1,402 @@
+/* Definición de variables de color */
+:root {
+    --blanco: #f5f5f5; /* Blanco tiza */
+    --negro: #333333; /* Gris topo */
+    --primario: #A38B00; /* Color dorado */
+    --secundario: #D3D3D3; /* Gris claro */
+    --terciario: #FFFDD0; /* Crema */
+    --acento: #222844; /* Azul marino */
+    --exito: #1B4B3E; /* Verde oscuro */
+    --alerta: #FFEA70; /* Dorado aclarado al 40% */
+    --contraste: #480D5B; /* Violeta */
+
+    --primario-60: #CCAD00; /* Dorado aclarado al 60% */
+    --acento-60: #37416D; /* Azul marino aclarado al 60% */
+    --acento-40: #8590C1; /* Azul marino aclarado al 40% */
+    --contraste-60: #7E17A1; /* Violeta aclarado al 60% */
+}
+
+/* Estilos generales */
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+header, footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 10px 20px;
+}
+
+header {
+    border-bottom: 3px solid var(--contraste-60);
+    height: 4vh;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primario);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 7px;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    color:var(--contraste-60);
+}
+
+footer {
+    border-top: 3px solid var(--contraste-60);
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: var(--acento-40);
+    text-decoration: none;
+}
+
+/* Estilos para la galería de fotos */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    border-radius: 5px;
+    width: 30%;
+    margin-bottom: 20px;
+    border: 3px solid var(--acento-60);
+}
+
+/* Estilos para los botones llenos */
+.btn-filled-primario {
+    background-color: var(--primario);
+    color: var(--blanco);
+    border: 2px solid var(--primario);
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-filled-primario:hover {
+    background-color: var(--primario-60);
+    color: var(--negro);
+}
+
+/* Estilos para los botones outline */
+.btn-outline-primario {
+    background-color: transparent;
+    color: var(--primario);
+    border: 2px solid var(--primario);
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-outline-primario:hover {
+    color: var(--blanco);
+    background-color: var(--primario);
+}
+
+/* Estilos específicos para el hero */
+.hero {
+    background-image: url('https://picsum.photos/1920/1080?grayscale');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--acento-40);
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+/* Estilos para los botones llenos */
+.btn-filled {
+    background-color: var(--primario);
+    color: var(--blanco);
+    border: 2px solid var(--primario);
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-filled:hover {
+    background-color: var(--primario-60);
+    color: var(--negro);
+}
+
+/* Estilos para los botones outline */
+.btn-outline {
+    background-color: transparent;
+    color: var(--primario);
+    border: 2px solid var(--primario);
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-outline:hover {
+    color: var(--blanco);
+    background-color: var(--primario);
+}
+
+/* Estilos para los videos */
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.video {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+/* Estilos para el mapa */
+.map {
+    padding: 20px;
+}
+
+.map h2 {
+    margin-bottom: 10px;
+}
+
+.map iframe {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para la sección de biografía */
+.bio {
+    margin-bottom: 30px;
+}
+
+.bio p {
+    margin-bottom: 20px;
+}
+
+/* Estilos para la sección de hitos de estudio */
+.hitos-estudio {
+    margin-bottom: 30px;
+}
+
+.hitos-estudio ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.hitos-estudio li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección de congresos */
+.congresos {
+    margin-bottom: 30px;
+}
+
+.congresos ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.congresos li {
+    margin-bottom: 10px;
+}
+
+/* CSS para el formulario */
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para la sección de información de contacto */
+.informacion {
+    padding: 20px;
+    background-color: var(--terciario);
+    margin-bottom: 20px;
+}
+
+.informacion p {
+    color: var(--negro);
+}
+
+.informacion ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.informacion ul li {
+    margin-bottom: 10px;
+}
+
+.informacion strong {
+    color: var(--negro);
+}
+
+.informacion a {
+    color: var(--acento-40);
+    text-decoration: none;
+}
+
+.informacion a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 20px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    .map iframe {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    input,
+    textarea {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
