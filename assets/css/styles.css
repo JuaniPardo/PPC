@@ -251,17 +251,20 @@ footer ul li a {
 }
 
 /* Estilos para la galería de fotos */
-.gallery, .videos{
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    flex-wrap: wrap;
-    flex-grow: 1;
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 20px;
 }
 
-.gallery img, video{
-    width: 400px;
+.videos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(560px, 1fr));
+    gap: 20px;
+}
+
+.gallery img{
+    width: 100%;
     height: 300px;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
