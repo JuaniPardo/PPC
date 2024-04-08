@@ -1,0 +1,70 @@
+@import "variables";
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../../assets/images/marmolblanco.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $negro;
+}
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  color: $primario-claro;
+}
+
+/* Sections */
+section {
+  padding: 20px;
+}
+
+section h2 {
+  color: $oscuro;
+}
+
+//MIXIN BOTONES
+@mixin boton($color-fondo, $color-texto, $color-borde, $color-hover, $texto-hover) {
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: $color-fondo;
+  color: $color-texto;
+  border: 2px solid $color-borde;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+
+  &:hover {
+    background-color: $color-hover;
+    color: $texto-hover;
+    border-color: $color-hover;
+  }
+}
+
+.btn-filled-primario {
+  @include boton($primario, white, transparent, $primario-claro, white);
+}
+
+.btn-outline-primario {
+  @include boton(transparentize($primario, 0.8), white, darken($primario, 10%), darken($primario, 10%), white);
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+footer ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer ul li a {
+  color: var(--acento-40);
+  text-decoration: none;
+}

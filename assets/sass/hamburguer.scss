@@ -1,0 +1,81 @@
+@import "variables";
+
+/* Menu hamburgesa */
+.navbar-toggler {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid transparent;
+  position: relative;
+  transition: .5s ease-in-out;
+}
+
+/* Estilo para el botón expandido */
+.navbar-toggler:not(.collapsed) {
+  background-color: transparent; /* Fondo transparente cuando está expandido */
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: $primario-claro;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.mid-bar {
+  margin-top: 0;
+}
+
+/*Estado abierto*/
+.navbar-toggler .top-bar {
+  margin-top: 0;
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler .mid-bar {
+  background: transparent;
+
+}
+
+.navbar-toggler .bot-bar {
+  margin-top: 0;
+  transform: rotate(-135deg);
+}
+
+/*Estado collapsed*/
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .mid-bar {
+  margin-top: 0;
+  transform: rotate(0deg);
+  background: $primario-claro;
+}
+
+
+.navbar-toggler.collapsed .bot-bar {
+  margin-top: 20px;
+  transform: rotate(0deg);
+}

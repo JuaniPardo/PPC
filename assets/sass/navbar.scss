@@ -1,0 +1,74 @@
+@import "variables";
+
+.nav-link {
+  font-size: 1.2rem;
+  color: $blanco;
+}
+
+.nav-link:hover{
+  color: $primario-claro;
+}
+
+.nav-link:hover::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: $primario-claro;
+  animation: animated-after 0.2s ease-in forwards;
+}
+
+@keyframes animated-after {
+  to{
+    width: 100%;
+  }
+}
+
+.activo, .activo:hover{
+  color: $primario-claro;
+}
+
+@keyframes logo-animado {
+  0% {
+    background-position: 100%;
+  }
+  50% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 1000;
+  margin-left: 10px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background: $primario;
+  background: linear-gradient(90deg, $oscuro 0%, $primario-claro 30%, $secundario 100%);
+  background-size: 300% 300%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: logo-animado 15s ease-in-out infinite;
+  padding: 5px;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  /*margin-bottom: 10px;*/
+}
+
+.logo:hover {
+  color: transparent;
+}
+
+.logo:hover::after {
+  animation: animated-after 0.2s ease-in forwards;
+  background-color: $primario-claro;
+}

@@ -214,7 +214,6 @@ h1 {
 }
 
 /* Sections */
-
 section {
     padding: 20px;
 }
@@ -306,6 +305,7 @@ footer ul li a {
 .btn-outline-primario:hover {
     color: var(--blanco);
     background-color: var(--primario);
+    box-sizing: border-box;
 }
 
 /* Estilos específicos para el hero */

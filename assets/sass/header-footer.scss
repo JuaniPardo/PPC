@@ -1,0 +1,96 @@
+@import "variables";
+
+header,
+footer {
+  color: $blanco;
+}
+
+header {
+  background-color: rgba($negro, 0.75);
+  border-bottom: 3px solid $oscuro;
+}
+
+footer {
+  background-color: $negro;
+  border-top: 3px solid lighten($oscuro, 20%);
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #333333;
+  padding: 20px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.logos-container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-self: center;
+  text-decoration: none;
+}
+
+.footer-content .logo{
+  font-size: 2em;
+  margin: -10px 0;
+}
+
+.sub-logo{
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: $primario-claro;
+  margin: 0;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social ul li {
+  margin: 0 15px;
+}
+
+.social ul li:last-child {
+  margin-right: 0;
+}
+
+.social ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bi-facebook,
+.social ul li a.facebook:hover {
+  color: #007bff;
+}
+
+.bi-tiktok,
+.social ul li a.tiktok:hover {
+  color: #36F1EB;
+}
+
+.bi-instagram,
+.social ul li a.instagram:hover {
+  color: #dd2a7b;
+}
+
+/* Estilos para el copyright */
+.copyright {
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 10px;
+  color: $secundario;
+}
