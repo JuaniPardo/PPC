@@ -1,0 +1,57 @@
+@import "variables";
+
+/* CSS para el formulario */
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para la sección de información de contacto */
+.informacion {
+  padding: 20px;
+  background-color: var(--terciario);
+  margin-bottom: 20px;
+}
+
+.informacion p {
+  color: var(--negro);
+}
+
+.informacion ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.informacion ul li {
+  margin-bottom: 10px;
+}
+
+.informacion strong {
+  color: var(--negro);
+}
+
+.informacion a {
+  color: var(--acento-40);
+  text-decoration: none;
+}
+
+.informacion a:hover {
+  text-decoration: underline;
+}

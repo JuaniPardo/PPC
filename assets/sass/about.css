@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* Estilos para la sección de biografía */
+.bio {
+  margin-bottom: 30px;
+}
+
+.bio p {
+  margin-bottom: 20px;
+}
+
+/* Estilos para la sección de hitos de estudio */
+.hitos-estudio {
+  margin-bottom: 30px;
+}
+
+.hitos-estudio ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.hitos-estudio li {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la sección de congresos */
+.congresos {
+  margin-bottom: 30px;
+}
+
+.congresos ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.congresos li {
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=about.css.map */
