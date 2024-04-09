@@ -8,6 +8,25 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 5vh;
+  align-items: stretch;
+  padding: 8%;
+}
+
+@media (max-width: 992px) {
+  .contenedor-cards {
+    padding: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+    .contenedor-cards {
+        grid-template-areas:
+        "mision"
+        "vision"
+        "valores";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 .mision {
@@ -23,7 +42,36 @@
 }
 
 .card {
-  display: flex;
-  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
   padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.card-header h3 {
+  color: transparent;
+  background: $oscuro;
+  -webkit-background-clip: text;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  //background-color: $blanco;
+  color: $oscuro;
+  font-size: 1.2rem;
 }
