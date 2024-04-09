@@ -468,6 +468,32 @@ footer {
   margin-right: auto;
 }
 
+.contenedor-cards {
+  display: grid;
+  grid-template-areas: "mision vision" "valores valores";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 5vh;
+}
+
+.mision {
+  grid-area: mision;
+}
+
+.vision {
+  grid-area: vision;
+}
+
+.valores {
+  grid-area: valores;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
 .nav-link {
   font-size: 1.2rem;
   color: #E4E4E4;
