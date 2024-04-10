@@ -6,11 +6,3 @@ document.addEventListener("DOMContentLoaded", function() {
         spinnerContainer.classList.remove("show");
     });
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    const hero = document.querySelector(".hero");
-    window.addEventListener("scroll", function() {
-        let scrollPosition = window.scrollY;
-        hero.style.backgroundPositionY = -scrollPosition * 0.5 + "px";
-    });
-});
