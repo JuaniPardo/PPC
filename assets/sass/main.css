@@ -129,7 +129,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url("/assets/images/marmolblanco.jpg");
+  background-image: url("/assets/images/marmolblanco.webp");
   background-size: cover;
   background-repeat: no-repeat;
   color: #333;
@@ -374,7 +374,7 @@ footer {
 
 /* Estilos específicos para el hero */
 .hero {
-  background-image: url("/assets/images/empty-hallway-background (1).webp");
+  background-image: url("/assets/images/empty-hallway-background.webp");
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
