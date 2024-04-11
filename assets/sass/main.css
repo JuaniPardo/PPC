@@ -1,49 +1,34 @@
 @charset "UTF-8";
-/* Estilos para la sección de biografía */
-.bio {
+/* Estilos para las secciones compartidas */
+.section, .informacion, .form-group, .congresos, .hitos-estudio, .bio {
   margin-bottom: 30px;
 }
 
+.section ul, .informacion ul, .form-group ul, .congresos ul, .hitos-estudio ul, .bio ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.section li, .informacion li, .form-group li, .congresos li, .hitos-estudio li, .bio li {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la sección de biografía */
 .bio p {
   margin-bottom: 20px;
 }
 
 /* Estilos para la sección de hitos de estudio */
-.hitos-estudio {
-  margin-bottom: 30px;
-}
-
-.hitos-estudio ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.hitos-estudio li {
-  margin-bottom: 10px;
-}
-
 /* Estilos para la sección de congresos */
-.congresos {
-  margin-bottom: 30px;
+/* Estilos compartidos para formularios y secciones de información */
+.section, .informacion, .form-group, .bio, .hitos-estudio, .congresos {
+  margin-bottom: 20px;
 }
 
-.congresos ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.congresos li {
-  margin-bottom: 10px;
-}
-
-/* CSS para el formulario */
+/* Estilos para el formulario */
 .formulario {
   max-width: 600px;
   margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 20px;
 }
 
 label {
@@ -62,12 +47,11 @@ textarea {
 /* Estilos para la sección de información de contacto */
 .informacion {
   padding: 20px;
-  background-color: var(--terciario);
-  margin-bottom: 20px;
+  background-color: #E4E4E4;
 }
 
-.informacion p {
-  color: var(--negro);
+.informacion p, .informacion strong {
+  color: #333;
 }
 
 .informacion ul {
@@ -79,15 +63,10 @@ textarea {
   margin-bottom: 10px;
 }
 
-.informacion strong {
-  color: var(--negro);
-}
-
 .informacion a {
-  color: var(--acento-40);
+  color: #A45237;
   text-decoration: none;
 }
-
 .informacion a:hover {
   text-decoration: underline;
 }
@@ -120,7 +99,7 @@ textarea {
 }
 .videos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(560px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
 }
 
@@ -161,9 +140,9 @@ section h2 {
   transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
 }
 .btn-filled-primario:hover {
-  background-color: #d08971;
+  background-color: #7e3f2a;
   color: white;
-  border-color: #d08971;
+  border-color: #7e3f2a;
 }
 
 .btn-outline-primario {
@@ -171,8 +150,8 @@ section h2 {
   padding: 10px 20px;
   text-decoration: none;
   cursor: pointer;
-  background-color: rgba(164, 82, 55, 0.2);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #7e3f2a;
   border: 2px solid #7e3f2a;
   transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
 }
@@ -180,23 +159,6 @@ section h2 {
   background-color: #7e3f2a;
   color: white;
   border-color: #7e3f2a;
-}
-
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-footer ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-footer ul li a {
-  color: var(--acento-40);
-  text-decoration: none;
 }
 
 /* Menu hamburgesa */
@@ -277,26 +239,19 @@ footer ul li a {
   transform: rotate(0deg);
 }
 
-header,
-footer {
-  color: #E4E4E4;
-}
-
+/* Estilos para el header */
 header {
-  background-color: rgba(51, 51, 51, 0.75);
-  border-bottom: 3px solid #5D5347;
-}
-
-footer {
-  background-color: #333;
-  border-top: 3px solid #958675;
+  color: #E4E4E4;
+  background-color: rgba(51, 51, 51, 0.9);
+  border-bottom: 3px solid #958675;
 }
 
 /* Estilos para el footer */
 footer {
   background-color: #333333;
+  border-top: 3px solid #958675;
+  color: #E4E4E4;
   padding: 20px;
-  color: #fff;
 }
 
 .footer-content {
@@ -372,13 +327,12 @@ footer {
   color: #9FA0A2;
 }
 
-/* Estilos específicos para el hero */
 .hero {
   background-image: url("/assets/images/empty-hallway-background.webp");
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  height: 70vh;
+  height: 70vh; /* Considera usar unidades relativas para mejorar la adaptabilidad */
   text-align: center;
   position: relative;
   display: flex;
@@ -420,7 +374,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .hero {
-    height: 90vh;
+    height: 90vh; /* Considera usar unidades relativas para mejorar la adaptabilidad */
   }
   .hero img {
     margin: 0 auto;
@@ -430,10 +384,6 @@ footer {
   font-size: 3rem;
   text-transform: uppercase;
   margin: 0 auto;
-}
-
-.hero .hero-text h1 {
-  text-align: left;
 }
 
 .hero h1 {

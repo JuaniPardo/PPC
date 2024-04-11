@@ -1,13 +1,18 @@
 @import "variables";
 
-/* CSS para el formulario */
+/* Estilos compartidos para formularios y secciones de información */
+.section {
+  margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
 .formulario {
   max-width: 600px;
   margin: 0 auto;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  @extend .section;
 }
 
 label {
@@ -26,12 +31,12 @@ textarea {
 /* Estilos para la sección de información de contacto */
 .informacion {
   padding: 20px;
-  background-color: var(--terciario);
-  margin-bottom: 20px;
+  background-color: $blanco;
+  @extend .section;
 }
 
-.informacion p {
-  color: var(--negro);
+.informacion p, .informacion strong {
+  color: $negro;
 }
 
 .informacion ul {
@@ -43,15 +48,11 @@ textarea {
   margin-bottom: 10px;
 }
 
-.informacion strong {
-  color: var(--negro);
-}
-
 .informacion a {
-  color: var(--acento-40);
+  color: $primario;
   text-decoration: none;
-}
 
-.informacion a:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }

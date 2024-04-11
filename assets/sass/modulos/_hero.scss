@@ -1,12 +1,11 @@
 @import "variables";
 
-/* Estilos específicos para el hero */
 .hero {
   background-image: url('/assets/images/empty-hallway-background.webp');
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  height: 70vh;
+  height: 70vh; /* Considera usar unidades relativas para mejorar la adaptabilidad */
   text-align: center;
   position: relative;
   display: flex;
@@ -26,7 +25,6 @@
 .contenido-hero {
   position: sticky;
   width: 100%;
-  //height: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -49,7 +47,7 @@
     grid-template-columns: 1fr;
   }
   .hero {
-    height: 90vh;
+    height: 90vh; /* Considera usar unidades relativas para mejorar la adaptabilidad */
   }
   .hero img {
     margin: 0 auto;
@@ -60,11 +58,6 @@
   font-size: 3rem;
   text-transform: uppercase;
   margin: 0 auto;
-}
-
-.hero .hero-text h1 {
-  text-align: left;
-  //padding-left: 3rem;
 }
 
 .hero h1 {

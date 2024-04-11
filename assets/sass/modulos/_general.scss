@@ -26,8 +26,8 @@ section h2 {
   color: $oscuro;
 }
 
-//MIXIN BOTONES
-@mixin boton($color-fondo, $color-texto, $color-borde, $color-hover, $texto-hover) {
+// MIXIN BOTONES
+@mixin boton($color-fondo, $color-texto: white, $color-borde: transparent, $color-hover, $texto-hover: white) {
   border-radius: 5px;
   padding: 10px 20px;
   text-decoration: none;
@@ -45,26 +45,9 @@ section h2 {
 }
 
 .btn-filled-primario {
-  @include boton($primario, white, transparent, $primario-claro, white);
+  @include boton($primario, white, transparent, darken($primario, 10%)); // Proporciona el color-hover adecuado aquí
 }
 
 .btn-outline-primario {
-  @include boton(transparentize($primario, 0.8), white, darken($primario, 10%), darken($primario, 10%), white);
-}
-
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-footer ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-footer ul li a {
-  color: var(--acento-40);
-  text-decoration: none;
+  @include boton(transparentize(white, 0.6), darken($primario, 10%), darken($primario, 10%), darken($primario, 10%));
 }
