@@ -72,7 +72,7 @@ textarea {
 }
 
 /* Estilos para la galería de fotos */
-.gallery {
+.media, .videos, .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
@@ -97,12 +97,6 @@ textarea {
     opacity: 1;
   }
 }
-.videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 20px;
-}
-
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
