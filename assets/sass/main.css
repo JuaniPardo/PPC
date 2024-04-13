@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
+}
 /* Estilos para las secciones compartidas */
 .section, .informacion, .form-group, .congresos, .hitos-estudio, .bio {
   margin-bottom: 30px;
@@ -20,15 +24,27 @@
 
 /* Estilos para la sección de hitos de estudio */
 /* Estilos para la sección de congresos */
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
+}
 /* Estilos compartidos para formularios y secciones de información */
 .section, .informacion, .form-group, .bio, .hitos-estudio, .congresos {
   margin-bottom: 20px;
 }
 
 /* Estilos para el formulario */
+.tarjeta, .card, .formulario {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .formulario {
   max-width: 600px;
-  margin: 0 auto;
+  border-radius: 8px;
+  margin: 30px auto 30px;
 }
 
 label {
@@ -71,24 +87,42 @@ textarea {
   text-decoration: underline;
 }
 
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
+}
 /* Estilos para la galería de fotos */
 .media, .videos, .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
 }
 
-.gallery img {
-  scale: 0.9;
-  opacity: 0.5;
+figure {
+  border: 1rem solid white;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+figure div {
+  overflow: hidden;
+  background-color: black;
+}
+figure div img {
   aspect-ratio: 4/3;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  animation: fade-in linear forwards;
-  animation-timeline: view(); /* No funciona en Safari o Firefox */
-  animation-range: entry 200px;
+  opacity: 0;
+  animation: develop 0.5s ease-in-out forwards;
+}
+
+figcaption {
+  display: grid;
+  place-content: center end;
+  height: 3.5rem;
+  font-family: "Whisper", cursive;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 @keyframes fade-in {
@@ -96,6 +130,10 @@ textarea {
     scale: 1;
     opacity: 1;
   }
+}
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
 }
 body {
   font-family: Roboto, sans-serif;
@@ -155,6 +193,10 @@ section h2 {
   border-color: #7e3f2a;
 }
 
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
+}
 /* Menu hamburgesa */
 .navbar-toggler {
   width: 24px;
@@ -233,6 +275,10 @@ section h2 {
   transform: rotate(0deg);
 }
 
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
+}
 /* Estilos para el header */
 header {
   color: #E4E4E4;
@@ -321,6 +367,10 @@ footer {
   color: #9FA0A2;
 }
 
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
+}
 .hero {
   background-image: url("/assets/images/empty-hallway-background.webp");
   background-size: cover;
@@ -396,6 +446,10 @@ footer {
   gap: 25px;
 }
 
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
+}
 /* Estilos para el mapa */
 .map {
   padding: 20px;
@@ -412,6 +466,10 @@ footer {
   margin-right: auto;
 }
 
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
+}
 .contenedor-cards {
   display: grid;
   grid-template-areas: "mision vision" "valores valores";
@@ -435,10 +493,6 @@ footer {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(5px);
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
 }
 
@@ -485,6 +539,10 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
+}
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
 }
 .nav-link {
   font-size: 1.2rem;
@@ -557,6 +615,10 @@ footer {
   background-color: #d08971;
 }
 
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
+}
 /* SPINNER */
 .spinner {
   position: relative;
@@ -603,6 +665,10 @@ footer {
   to {
     transform: rotate(360deg);
   }
+}
+@font-face {
+  font-family: "Whisper";
+  src: url("/assets/fonts/Whisper.ttf");
 }
 
 /*# sourceMappingURL=main.css.map */

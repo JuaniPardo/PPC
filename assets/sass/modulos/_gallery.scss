@@ -4,30 +4,48 @@
 
 .media {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
 }
-.gallery{
-  @extend .media;
-  img {
-    scale: 0.9; opacity: .5;
-    aspect-ratio: 4 / 3;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: fade-in linear forwards;
-    animation-timeline: view(); /* No funciona en Safari o Firefox */
-    animation-range: entry 200px;
+
+figure {
+  border: 1rem solid white;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  div {
+    overflow: hidden;
+    background-color: black;
+    img {
+      aspect-ratio: 4/3;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: develop 0.5s ease-in-out forwards;
+    }
   }
+}
+
+figcaption {
+  display: grid;
+  place-content: center end;
+  height: 3.5rem;
+  font-family: $cusrsiva;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.gallery {
+  @extend .media;
 }
 
 @keyframes fade-in {
   to {
-    scale: 1; opacity: 1;
+    scale: 1;
+    opacity: 1;
   }
 }
 
-.videos{
+.videos {
   @extend .media;
 }
