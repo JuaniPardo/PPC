@@ -112,8 +112,6 @@ figure div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  animation: develop 0.5s ease-in-out forwards;
 }
 
 figcaption {
@@ -123,6 +121,19 @@ figcaption {
   font-family: "Whisper", cursive;
   font-size: 1.5rem;
   line-height: 1;
+}
+
+.gallery img {
+  scale: 0.9;
+  opacity: 0.5;
+  aspect-ratio: 4/3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fade-in linear forwards;
+  animation-timeline: view(); /* No funciona en Safari o Firefox */
+  animation-range: entry 200px;
 }
 
 @keyframes fade-in {

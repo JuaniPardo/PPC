@@ -20,8 +20,6 @@ figure {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0;
-      animation: develop 0.5s ease-in-out forwards;
     }
   }
 }
@@ -37,6 +35,17 @@ figcaption {
 
 .gallery {
   @extend .media;
+  img {
+    scale: 0.9; opacity: .5;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fade-in linear forwards;
+    animation-timeline: view(); /* No funciona en Safari o Firefox */
+    animation-range: entry 200px;
+  }
 }
 
 @keyframes fade-in {
