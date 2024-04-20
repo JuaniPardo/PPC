@@ -5,7 +5,7 @@
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  height: 70vh; /* Considera usar unidades relativas para mejorar la adaptabilidad */
+  height: 70vh;
   text-align: center;
   position: relative;
   display: flex;
@@ -42,17 +42,7 @@
   border: 5px solid $primario;
 }
 
-@media only screen and (max-width: 650px) {
-  .contenido-hero {
-    grid-template-columns: 1fr;
-  }
-  .hero {
-    height: 90vh; /* Considera usar unidades relativas para mejorar la adaptabilidad */
-  }
-  .hero img {
-    margin: 0 auto;
-  }
-}
+
 
 .hero .hero-text {
   font-size: 3rem;

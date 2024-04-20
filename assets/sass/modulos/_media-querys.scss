@@ -1,0 +1,42 @@
+@import "variables";
+
+// Media query para pantallas medianas (max-width: 992px)
+@media (max-width: 992px) {
+  .contenedor-cards {
+    padding: 3%;
+  }
+  .card-body {
+    flex-direction: column;
+  }
+  main {
+    padding: 0 3em;
+  }
+}
+
+// Media query para pantallas pequeñas (max-width: 768px)
+@media (max-width: 768px) {
+  .contenedor-cards {
+    grid-template-areas:
+        "mision"
+        "vision"
+        "valores";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  main {
+    padding: 0;
+  }
+}
+
+// Media query para pantallas muy pequeñas (max-width: 650px)
+@media only screen and (max-width: 650px) {
+  .contenido-hero {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    height: 90vh;
+  }
+  .hero img {
+    margin: 0 auto;
+  }
+}

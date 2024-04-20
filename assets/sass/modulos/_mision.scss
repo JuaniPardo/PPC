@@ -57,23 +57,3 @@
   font-size: 1.2rem;
   gap: 20px;
 }
-
-@media (max-width: 992px) {
-  .contenedor-cards {
-    padding: 3%;
-  }
-  .card-body {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 768px) {
-  .contenedor-cards {
-    grid-template-areas:
-        "mision"
-        "vision"
-        "valores";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
