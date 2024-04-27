@@ -1,13 +1,23 @@
+// Variables
+@import "modulos/variables";
+
+//Mixins
+@import "modulos/mixins";
+
+// Animacio Menú Hamburguesa
+@import "modulos/hamburguer";
+
+// Generales
 @import "modulos/about";
 @import "modulos/contacto";
 @import "modulos/gallery";
 @import "modulos/general";
-@import "modulos/hamburguer";
 @import "modulos/header-footer";
 @import "modulos/hero";
 @import "modulos/mapa-iframe";
-@import "modulos/media-querys";
 @import "modulos/mision";
 @import "modulos/navbar";
 @import "modulos/spinner";
-@import "modulos/variables";
+
+// Media querys
+@import "modulos/media-querys";

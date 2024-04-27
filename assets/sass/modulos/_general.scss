@@ -35,26 +35,8 @@ section h2 {
   backdrop-filter: blur(5px);
 }
 
-// MIXIN BOTONES
-@mixin boton($color-fondo, $color-texto: white, $color-borde: transparent, $color-hover, $texto-hover: white) {
-  border-radius: 5px;
-  padding: 10px 20px;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: $color-fondo;
-  color: $color-texto;
-  border: 2px solid $color-borde;
-  transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
-
-  &:hover {
-    background-color: $color-hover;
-    color: $texto-hover;
-    border-color: $color-hover;
-  }
-}
-
 .btn-filled-primario {
-  @include boton($primario, white, transparent, darken($primario, 10%)); // Proporciona el color-hover adecuado aquí
+  @include boton($primario, white, transparent, darken($primario, 10%));
 }
 
 .btn-outline-primario {
