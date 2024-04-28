@@ -30,11 +30,6 @@ section h2 {
   color: $oscuro;
 }
 
-.contraste {
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(5px);
-}
-
 .btn-filled-primario {
   @include boton($primario, white, transparent, darken($primario, 10%));
 }

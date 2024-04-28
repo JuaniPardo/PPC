@@ -4,8 +4,25 @@
 
 .media {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  @extend .media;
+  img {
+    scale: 0.9; opacity: .5;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fade-in linear forwards;
+    animation-timeline: view(); /* No funciona en Safari o Firefox */
+    animation-range: entry 200px;
+  }
 }
 
 figure {
@@ -13,11 +30,13 @@ figure {
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s;
+  max-width: 300px;
+  margin: 0 auto 1rem;
   div {
     overflow: hidden;
     background-color: black;
-    img {
-      aspect-ratio: 4/3;
+    .polaroids {
+      aspect-ratio: 1;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -36,21 +55,6 @@ figcaption {
   font-family: $cusrsiva;
   font-size: 1.5rem;
   line-height: 1;
-}
-
-.gallery {
-  @extend .media;
-  img {
-    scale: 0.9; opacity: .5;
-    aspect-ratio: 4 / 3;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: fade-in linear forwards;
-    animation-timeline: view(); /* No funciona en Safari o Firefox */
-    animation-range: entry 200px;
-  }
 }
 
 @keyframes fade-in {
