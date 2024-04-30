@@ -188,7 +188,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
 }
 
@@ -243,6 +243,10 @@ figcaption {
     opacity: 1;
   }
 }
+.videos article h2 {
+  font-size: 1.5rem;
+}
+
 @font-face {
   font-family: "Whisper";
   src: url("/assets/fonts/Whisper.ttf");
@@ -252,7 +256,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url("/assets/images/marmolblanco.webp");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/assets/images/marmolblanco.webp");
   background-size: cover;
   background-repeat: no-repeat;
   color: #333;

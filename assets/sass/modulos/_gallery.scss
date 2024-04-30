@@ -6,14 +6,16 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
 }
 
 .gallery {
   @extend .media;
+
   img {
-    scale: 0.9; opacity: .5;
+    scale: 0.9;
+    opacity: .5;
     aspect-ratio: 4 / 3;
     width: 100%;
     height: 100%;
@@ -32,9 +34,11 @@ figure {
   transition: transform 0.5s;
   max-width: 300px;
   margin: 0 auto 1rem;
+
   div {
     overflow: hidden;
     background-color: black;
+
     .polaroids {
       aspect-ratio: 1;
       width: 100%;
@@ -66,4 +70,11 @@ figcaption {
 
 .videos {
   @extend .media;
+
+  article {
+    h2 {
+      font-size: 1.5rem;
+
+    }
+  }
 }
